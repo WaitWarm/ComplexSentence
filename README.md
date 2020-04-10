@@ -1,9 +1,6 @@
 ## Description
 
-Implementation of the paper ["Document-Level Neural Machine Translation with Hierarchical Attention Networks"](http://www.aclweb.org/anthology/D18-1325). It is based on OpenNMT (v.2.1) https://github.com/OpenNMT/OpenNMT-py
-
-This is a restricted version. It DOES NOT work for shards, and multimodal translation.
-
+This contains only sentence-level complex numbers
 ## Preprocess
 The data, similary for any NMT baseline, consists of a source file and a target file which are aligned at sentence-level. However, the sentences should be in order for each document (i.e. not shuffled). Additionally, the model requires a file (doc_file) indicating the beginning of each document in the source file. Each line of the doc_file indicates the number of lines at the source file where a new document starts. 
 
@@ -71,18 +68,6 @@ Input options:
 - translate_part: [sentences, all]
 - batch_size: maximun number of sentences to keep in memory at once.
 
-
-## Test files reported in the paper
-The output files of the 3 reported systems: transformer NMT, cache NMT, HAN-decoder NMT, HAN-encoder NMT, HAN-encoder-decoder NMT.
->	- sub_es-en: Opensubtitles 
->	- sub_zh-en: TV subtitles 
->	- TED_es-en: TED Talks WIT 2015
->	- TED_zh-en: TED Talks WIT 2014
+The above run command is in starttrain.py under the full_source folder
 
 
-## Reference:
->Miculicich, L., Ram, D., Pappas, N. & Henderson, J. Document-Level Neural Machine Translation with Hierarchical Attention Networks. EMNLP 2018. 
-https://www.aclweb.org/anthology/D18-1325/
- 
-## Contact:
-lmiculicich@idiap.ch
